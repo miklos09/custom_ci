@@ -1,3 +1,3 @@
 <div class="mi-wrapper">
-	<p><?php echo $text; ?></p>
+	<p>Page missing</p>
 </div>

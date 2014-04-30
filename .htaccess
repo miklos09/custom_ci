@@ -1,7 +1,21 @@
 php_value max_execution_time 259200
 <IfModule mod_rewrite.c>
-    RewriteEngine On
+	
+	# Make sure directory listing is disabled
+	Options +FollowSymLinks -Indexes
+	
+	# disable the Apache MultiViews directive if it is enabled on the server. It plays havoc with URL rewriting
+	Options -MultiViews
+	
+
+
+	RewriteEngine on
     RewriteBase /custom_ci
+	
+	# Hide image, js, css, full url for security purposes
+	RewriteRule files/(.*) application/themes/$1 [L]
+	
+	
 
     #Removes access to the system folder by users.
     #Additionally this will allow you to create a System.php controller,
@@ -24,6 +38,7 @@ php_value max_execution_time 259200
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} !^(/index\.php|/img|/js|/css|/robots\.txt|/favicon\.ico)
     RewriteRule ^(.*)$ index.php?/$1 [L]
+	
 </IfModule>
 
 <IfModule !mod_rewrite.c>
