@@ -28,7 +28,7 @@ class My_Controller extends CI_Controller{
 		else{
 			$arrange_views = $this->arrange_views($views);
 			foreach($arrange_views as $view){
-				$view_src = $template.'/'.$view;
+				$view_src = $template.'/views/'.$view;
 				$this->load->view($view_src, $this->data);
 			}
 		}
@@ -40,8 +40,8 @@ class My_Controller extends CI_Controller{
 		// header placed at index 0 and
 		// footer placed at the index(n-1)
 		
-		$header_loc = 'common/header';
-		$footer_loc = 'common/footer';
+		$header_loc = '/views/common/header';
+		$footer_loc = '/views/common/footer';
 		
 		$narr = array();
 		foreach($views as $key => $val){

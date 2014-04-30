@@ -362,10 +362,7 @@ $config['proxy_ips'] = '';
 | Template
 |--------------------------------------------------------------------------
 |
-| If your server is behind a reverse proxy, you must whitelist the proxy IP
-| addresses from which CodeIgniter should trust the HTTP_X_FORWARDED_FOR
-| header in order to properly identify the visitor's IP address.
-| Comma-delimited, e.g. '10.0.1.200,10.0.1.201'
+| Change default template for user
 |
 */
 $config['template'] = 'default';

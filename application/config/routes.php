@@ -41,7 +41,7 @@
 $route['default_controller'] = 'user/login';
 $route['login'] = 'user/login';
 $route['home'] = 'user/home';
-$route['404_override'] = 'not_found';
+$route['404_override'] = '';
 
 
 /* End of file routes.php */
