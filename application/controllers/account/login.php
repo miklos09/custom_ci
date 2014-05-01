@@ -18,9 +18,9 @@ class Login extends My_Controller{
 	}
 	public function index(){
 		$this->tmpl = array(
-			'common/footer',
 			'common/header',
 			'account/login',
+			'common/footer',
 		);
 		$this->data['title'] = 'Login';
 		$this->data['userinfo'] = array(

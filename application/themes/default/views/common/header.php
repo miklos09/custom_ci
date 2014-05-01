@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+		<link rel="shortcut icon" href="<?php echo img_url(); ?>favicon.ico">
 		<title>Starter Template for Bootstrap</title>
 
 		<link href="<?php echo plugins_url(); ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">

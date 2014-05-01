@@ -11,6 +11,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class My_Controller extends CI_Controller{
 	
+	public $template = '';
+	
 	function __construct(){
 		parent::__construct();
 	}
@@ -18,9 +20,9 @@ class My_Controller extends CI_Controller{
 		$template = $this->config->item('template');
 		
 		$views = array();
-		if( isset($this->tmpl) ){
-			if( is_array($this->tmpl) ) 
-				$views = $this->tmpl;
+		if( isset($this->template) ){
+			if( is_array($this->template) ) 
+				$views = $this->template;
 		}
 		if(!$views){
 			return false;
@@ -40,8 +42,8 @@ class My_Controller extends CI_Controller{
 		// header placed at index 0 and
 		// footer placed at the index(n-1)
 		
-		$header_loc = '/views/common/header';
-		$footer_loc = '/views/common/footer';
+		$header_loc = 'common/header';
+		$footer_loc = 'common/footer';
 		
 		$narr = array();
 		foreach($views as $key => $val){

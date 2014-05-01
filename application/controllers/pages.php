@@ -16,10 +16,20 @@ class Pages extends My_Controller{
 
 	}
 	public function index(){
-		$this->tmpl = array(
+		$this->template = array(
 			'common/footer',
 			'common/header',
 			'error/error_404',
+		);
+		$this->data['title'] = 'Login';
+		$this->render();
+	}
+	
+	public function tag_test(){
+		$this->template = array(
+			'common/footer',
+			'common/header',
+			'common/tag_test',
 		);
 		$this->data['title'] = 'Login';
 		$this->render();

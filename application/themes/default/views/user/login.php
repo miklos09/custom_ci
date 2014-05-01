@@ -10,7 +10,6 @@
 			  <input type="checkbox" id="remember" value="remember" />
 			  <span>Remember me on this computer</span>
 			</label>
-			
 		<form>
 	</div>
 	<p class="forgot">Forgot your password? <a href="">Click here to reset it.</a></p>

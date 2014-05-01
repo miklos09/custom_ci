@@ -20,7 +20,7 @@ class Login extends My_Controller{
 		$this->tmpl = array(
 			'common/footer',
 			'common/header',
-			'account/login',
+			'user/login',
 		);
 		$this->data['title'] = 'Login';
 		$this->data['userinfo'] = array(
