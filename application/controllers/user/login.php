@@ -16,7 +16,6 @@ class Login extends My_Controller{
 	}
 	public function index(){
 		
-	
 		$this->tmpl = array(
 			'common/footer',
 			'common/header',
@@ -29,7 +28,6 @@ class Login extends My_Controller{
 		);
 		$this->data['title'] = 'Login';
 	
-		
 		$this->render();
 	}
 }	
