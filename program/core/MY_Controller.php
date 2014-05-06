@@ -17,7 +17,15 @@ class My_Controller extends CI_Controller{
 		parent::__construct();
 	}
 	public function render(){
-		$template = $this->config->item('template');
+		/*
+		 * if render and no template is present
+		 * error on the My_controller will show 
+		 */
+		
+		if(empty($this->template) ){
+			show_error("No template views specified.", "500");
+		}
+		$config_template = $this->config->item('template');
 		
 		$views = array();
 		if( isset($this->template) ){
@@ -30,7 +38,7 @@ class My_Controller extends CI_Controller{
 		else{
 			$arrange_views = $this->arrange_views($views);
 			foreach($arrange_views as $view){
-				$view_src = $template.'/views/'.$view;
+				$view_src = $config_template.'/views/'.$view;
 				$this->load->view($view_src, $this->data);
 			}
 		}

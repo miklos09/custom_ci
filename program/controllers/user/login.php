@@ -16,7 +16,7 @@ class Login extends My_Controller{
 	}
 	public function index(){
 		
-		$this->tmpl = array(
+		$this->template = array(
 			'common/footer',
 			'common/header',
 			'user/login',
@@ -30,7 +30,7 @@ class Login extends My_Controller{
 	
 		$this->render();
 	}
-}	
+}
 
 /* End of file login.php */
 /* Location: ./application/config/login.php */
