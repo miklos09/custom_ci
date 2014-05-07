@@ -1,18 +1,13 @@
-<!-- Primary Page Layout -->
-<div class="container">
-	<div class="form-bg">
-		<form>
-			<h2>Login</h2>
-			<p><input type="text" placeholder="Username"></p>
-			<p><input type="password" placeholder="Password"></p>
-			<button type="submit">Login</button>
-			<label for="remember">
-			  <input type="checkbox" id="remember" value="remember" />
-			  <span>Remember me on this computer</span>
-			</label>
-		<form>
-	</div>
-	<p class="forgot">Forgot your password? <a href="">Click here to reset it.</a></p>
-</div><!-- container -->
-<!-- JS  -->
-<script src="<?php echo js_url(); ?>login/app.js"></script>
+<div class="login">
+	<h1>Login <font>System name</font></h1>
+	<form method="POST" action="<?php ?>">
+		<div class="lo-field">
+			<label>email:</label>
+			<input type="text" name="email" />
+			<label>password:</label>
+			<input type="text" name="password" />
+		</div>
+		<input class="btn-blue" type="button" name="sign-in" value="Sign-in with System Name"/>
+		<input class="btn-gray" type="button" name="sign-in" value="Register"/>
+	</form>
+</div>

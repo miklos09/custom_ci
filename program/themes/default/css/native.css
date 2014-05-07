@@ -1,6 +1,7 @@
 *{
-	background:#999;
-	border:solid 1px #949494;
-	margin:0 !important;
-	padding:0 !important;
+	margin:0;
+	padding:0;
+}
+input{
+	outline:none;
 }

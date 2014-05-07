@@ -11,6 +11,7 @@
 
 		<link href="<?php echo plugins_url(); ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php echo plugins_url(); ?>bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="<?php echo base_url(); ?>files/default/css/login.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>files/default/css/native.css" rel="stylesheet">
 	</head>
 	<body>

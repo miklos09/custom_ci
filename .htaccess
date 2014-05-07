@@ -13,7 +13,7 @@ php_value max_execution_time 259200
     RewriteBase /custom_ci
 	
 	# Hide image, js, css, full url for security purposes
-	RewriteRule files/(.*) application/themes/$1 [L]
+	RewriteRule files/(.*) program/themes/$1 [L]
 	
 	
 
