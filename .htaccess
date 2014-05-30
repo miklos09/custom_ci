@@ -13,7 +13,7 @@ php_value max_execution_time 259200
     RewriteBase /custom_ci
 	
 	# Hide image, js, css, full url for security purposes
-	RewriteRule files/(.*) program/themes/$1 [L]
+	RewriteRule files/(.*) app/themes/$1 [L]
 	
 	
 
@@ -29,7 +29,7 @@ php_value max_execution_time 259200
     #This snippet prevents user access to the application folder
     #Submitted by: Fabdrol
     #Rename 'application' to your applications folder name.
-    RewriteCond %{REQUEST_URI} ^application.*
+    RewriteCond %{REQUEST_URI} ^app.*
     RewriteRule ^(.*)$ /index.php?/$1 [L]
 
     #Checks to see if the user is attempting to access a valid file,

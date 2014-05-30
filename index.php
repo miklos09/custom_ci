@@ -77,7 +77,7 @@ if( ! ini_get('date.timezone') ){
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'program';
+	$application_folder = 'app';
 
 /*
  * --------------------------------------------------------------------
