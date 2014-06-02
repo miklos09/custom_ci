@@ -29,7 +29,7 @@ class Pages extends My_Controller{
 		$this->template = array(
 			'common/footer',
 			'common/header',
-			'common/tag_test',
+			'temp/tag_test',
 		);
 		$this->data['title'] = 'Login';
 		$this->render();

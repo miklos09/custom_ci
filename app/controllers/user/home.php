@@ -20,8 +20,7 @@ class Home extends My_Controller{
 			'common/footer',
 			'common/navi',
 			'common/header',
-			'account/home',
-			
+			'account/home',	
 		);
 		$this->data['title'] = 'Home';
 		$this->render();

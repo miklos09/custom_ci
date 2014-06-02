@@ -38,11 +38,9 @@
 |
 */
 
-$route['default_controller'] = 'user/login';
-$route['login'] = 'user/login';
-$route['home'] = 'user/home';
-$route['admin'] = 'admin/login';
-$route['dashboard'] = 'dashboard/dashboard';
+$route['default_controller'] = 'dashboard';
+$route['admin/dashboard/(:any)'] = 'admin/dashboard/$1';
+
 $route['404_override'] = 'pages';
 
 

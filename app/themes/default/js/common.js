@@ -20,8 +20,15 @@
         $(document).keydown(function (eventObj)
         {
             /* display the key and character code for the key you pressed */
-            alert("Key pressed: "+getKey(eventObj)+ " Code = "+getKeyCode(eventObj));
+            //alert("Key pressed: "+getKey(eventObj)+ " Code = "+getKeyCode(eventObj));
         });
     });
      
 })(jQuery);
+
+
+$(document).ready(function(){
+	var h = $('.box-type').height();
+	$('.box-type').height(h - 48);
+	//alert(h);
+});
