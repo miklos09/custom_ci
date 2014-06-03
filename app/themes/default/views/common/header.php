@@ -14,8 +14,12 @@
 		<link href="<?php echo base_url(); ?>files/default/css/native.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>files/default/css/main.css" rel="stylesheet">
 
-		<script src="<?php echo plugins_url(); ?>jquery/jquery-1.11.0.min.js"></script>
-
+		<script async type="text/javascript" src="<?php echo plugins_url(); ?>jquery/jquery-1.11.0.min.js"></script>
+		<script async type="text/javascript">
+			function base_url(){
+				return '<?php echo base_url(); ?>';
+			}
+		</script>
 	</head>
 	<body>
 	<div class="wrapper">

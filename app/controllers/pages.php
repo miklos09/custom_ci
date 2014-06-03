@@ -17,8 +17,6 @@ class Pages extends My_Controller{
 	}
 	public function index(){
 		$this->template = array(
-			'common/footer',
-			'common/header',
 			'error/error_404',
 		);
 		$this->data['title'] = 'Page missing';
@@ -27,8 +25,6 @@ class Pages extends My_Controller{
 	
 	public function tag_test(){
 		$this->template = array(
-			'common/footer',
-			'common/header',
 			'temp/tag_test',
 		);
 		$this->data['title'] = 'Login';

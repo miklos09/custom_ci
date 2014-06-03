@@ -1,21 +1,24 @@
 <?php
-	class User{
-	    protected static $table_name="users";
+	class Users{
+	    protected static $table_name="core_users";
 		
 		public $user_id;
-		public $user_type_id;
-		public $fullname;
+		public $group_id;
+		public $firstname;
+		public $middlename;
+		public $lastname;
 		public $email;
 		public $password;
+		public $language;
+		public $last_login;
 		public $stamp;
 		
 		### added variable, field not included
 		### on the user table.
-		public $story;
 		
 		public static function authenticate($email="", $password="") {
 			global $mysqli;
-			$username = $mysqli->real_escape_string($email);
+			$email = $mysqli->real_escape_string($email);
 			$password = $mysqli->real_escape_string($password);
 		
 			$sql  = "SELECT * FROM ".self::$table_name." ";
@@ -124,11 +127,15 @@
 		}		
 		public function update(){
 			global $mysqli;
-			$sql = "UPDATE ".self::$table_name." SET user_type_id = '";
-			$sql.= $mysqli->real_escape_string($this->user_type_id)."', fullname = '";
-			$sql.= $mysqli->real_escape_string($this->fullname)."', email= '";
+			$sql = "UPDATE ".self::$table_name." SET group_id = '";
+			$sql.= $mysqli->real_escape_string($this->group_id)."', firstname = '";
+			$sql.= $mysqli->real_escape_string($this->firstname)."', middlename = '";
+			$sql.= $mysqli->real_escape_string($this->middlename)."', lastname = '";
+			$sql.= $mysqli->real_escape_string($this->lastname)."', email = '";
 			$sql.= $mysqli->real_escape_string($this->email)."', password = '";
-			$sql.= $mysqli->real_escape_string($this->password)."' ";
+			$sql.= $mysqli->real_escape_string($this->password)."', language = '";
+			$sql.= $mysqli->real_escape_string($this->language)."', last_login = '";
+			$sql.= $mysqli->real_escape_string($this->last_login)."' ";
 			$sql.= "WHERE user_id = '";
 			$sql.= $mysqli->real_escape_string($this->user_id)."';";
 			$mysqli->query($sql) or die($mysqli->error);
@@ -143,11 +150,15 @@
 		public function create(){
 			global $mysqli;
 		
-			$sql = "INSERT INTO ".self::$table_name."(fullname, user_type_id, email, password) VALUES('";
-			$sql.= $mysqli->real_escape_string($this->fullname)."', '";
-			$sql.= $mysqli->real_escape_string($this->user_type_id)."', '";
+			$sql = "INSERT INTO ".self::$table_name."(group_id, firstname, middlename, lastname, email, password, language, last_login) VALUES('";
+			$sql.= $mysqli->real_escape_string($this->group_id)."', '";
+			$sql.= $mysqli->real_escape_string($this->firstname)."', '";
+			$sql.= $mysqli->real_escape_string($this->middlename)."', '";
+			$sql.= $mysqli->real_escape_string($this->lastname)."', '";
 			$sql.= $mysqli->real_escape_string($this->email)."', '";
-			$sql.= $mysqli->real_escape_string($this->password)."');";
+			$sql.= $mysqli->real_escape_string($this->password)."', '";
+			$sql.= $mysqli->real_escape_string($this->language)."', '";
+			$sql.= $mysqli->real_escape_string($this->last_login)."');";
 			if($mysqli->query($sql) or die($mysqli->error)){
 				$this->user_id = $mysqli->insert_id;
 				return true;

@@ -39,7 +39,10 @@ class My_Controller extends CI_Controller{
 			$arrange_views = $this->arrange_views($views);
 			foreach($arrange_views as $view){
 				$view_src = $config_template.'/views/'.$view;
-				$this->load->view($view_src, $this->data);
+				
+				$data = isset($this->data)?$this->data:array();
+				
+				$this->load->view($view_src, $data);
 			}
 		}
 	}
@@ -65,6 +68,24 @@ class My_Controller extends CI_Controller{
 			}
 		}
 		return $views;
+	}
+	
+	public function authenticate(){
+		$this->load->library('users');
+		
+		$email = $this->session->userdata('email');
+		$password = $this->session->userdata('password');
+		
+		if( !$this->users->authenticate($email, $password) ){
+			redirect(base_url().'login');
+		}
+		else
+			return true;
+		
+		
+		/* $email = $this->input->post('email');
+		$password = $this->encrypt->sha1( $this->input->post('password') );
+		*/
 	}
 }
 

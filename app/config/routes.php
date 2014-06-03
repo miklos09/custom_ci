@@ -40,6 +40,10 @@
 
 $route['default_controller'] = 'dashboard';
 $route['admin/dashboard/(:any)'] = 'admin/dashboard/$1';
+$route['login'] = 'user/login';
+$route['login/(:any)'] = 'user/login';
+$route['logout'] = 'user/logout';
+$route['logout/(:any)'] = 'user/logout/$1';
 
 $route['404_override'] = 'pages';
 

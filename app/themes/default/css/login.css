@@ -9,14 +9,14 @@ div.login{
 	font-family:Georgia, serif;
 }
 div.login h1{
-	font-size:36px;
+	font-size:35px;
 	color:#555555;
 }
 div.login h1 font{
 	color:#1F336A;
 }
 div.login .lo-field{
-	margin-left:-84px;
+	/* margin-left:-84px; */
 	width:404px;
 	margin-top:12px;
 }
@@ -33,6 +33,7 @@ div.login .lo-field input{
 	border:solid 1px #1F346A;
 	margin-bottom:8px;
 	padding:2px;
+	font-size:12px;
 }
 div.login .btn-blue{
 	width:250px;

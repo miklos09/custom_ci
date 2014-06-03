@@ -28,7 +28,38 @@
 
 
 $(document).ready(function(){
-	var h = $('.box-type').height();
-	$('.box-type').height(h - 48);
-	//alert(h);
+	$('.navi-b a').each(function(){
+		$(this).bind('click', function(){
+			var module = $(this).data('module'); 
+			var data = {
+				'data2': 'y',
+				'data3': 'z',
+			}
+			
+			ajax_call(module, data);
+		});
+	});
 });
+
+
+
+function ajax_call(module, data){
+	console.log(module);
+	request = $.ajax({
+		url: base_url() + module,
+		type: "POST",
+		data: { 'data' : data },
+		dataType: "html",
+		async: false
+	});
+	request.done(function( result ) {
+		$(".content").html(result);
+	});
+}
+
+
+
+
+
+
+

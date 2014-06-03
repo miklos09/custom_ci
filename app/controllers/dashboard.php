@@ -13,7 +13,8 @@ class Dashboard extends My_Controller{
 	
 	function __construct(){
 		parent::__construct();
-		
+		$this->load->library('users');
+		$this->authenticate();
 	}
 	public function index(){
 		$this->template = array(
@@ -25,7 +26,6 @@ class Dashboard extends My_Controller{
 		$this->data['title'] = 'Dashboard';
 		$this->render();
 	}
-	
 }	
 
 /* End of file login.php */

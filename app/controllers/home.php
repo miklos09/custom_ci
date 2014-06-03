@@ -1,7 +1,7 @@
 <?php 
 /*
 |--------------------------------------------------------------------------
-| AMS Central 1.0 - Login Controller
+| Custom CI 1.0 - Dashboard Controller
 | @Author: Miklos Herald
 | @Date: 2014/04/10/
 |--------------------------------------------------------------------------
@@ -9,21 +9,23 @@
 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends My_Controller{
+class Home extends My_Controller{
 	
 	function __construct(){
 		parent::__construct();
-		
+
 	}
 	public function index(){
 		$this->template = array(
 			'common/footer',
 			'common/header',
-			'user/login',
+			'common/left_navi',
+			'layout/dashboard',
 		);
-		$this->data['title'] = 'Login';
+		$this->data['title'] = 'Dashboard';
 		$this->render();
 	}
+	
 }
 
 /* End of file login.php */
